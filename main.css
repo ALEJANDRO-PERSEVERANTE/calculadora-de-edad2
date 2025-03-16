@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.calculator {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.neon-button {
+    background: #4a00e0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.neon-button:hover {
+    background: #8e2de2;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(142, 45, 226, 0.5);
+}
+
+.neon-button:active {
+    transform: translateY(0);
+}
+
+.resultado {
+    font-size: 1.5em;
+    color: #00ff88;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(0, 255, 136, 0.1);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto neon para el título */
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #00ff88;
+    margin: 15px auto;
+    box-shadow: 0 0 10px #00ff88;
+    border-radius: 5px;
+    animation: neon 1.5s infinite linear;
+
+    @keyframes neon {
+        0%, 100% {
+            box-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 40px #00ff88;
+        }
+        50% {
+            box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 80px #00ff88;
+        }
+    }
+}
